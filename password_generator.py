@@ -12,11 +12,11 @@ spec_karakterek = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_',
                    '=', '+', '[', ']', '{', '}', '\\', '|', ';', ':', "'", '"', 
                    ',', '<', '.', '>', '/', '?', '`', '~']
 
-print("Szia, ez egy jelszo generator!")
+st.write("Szia, ez egy jelszo generator!")
 
-betuk_sz = st.slider(int(input("Hany betubol alljon a jelszo?\n")))
-szamok_sz = st.slider(int(input("Hany szambol alljon a jelszo?\n")))
-spec_karakterek_sz = st.slider(int(input("Hany specialis karakterbol alljon a jelszo?\n")))
+betuk_sz = st.slider("Hany betubol alljon a jelszo?\n")
+szamok_sz = st.slider("Hany szambol alljon a jelszo?\n")
+spec_karakterek_sz = st.slider("Hany specialis karakterbol alljon a jelszo?\n")
 
 jelszo = []
 
