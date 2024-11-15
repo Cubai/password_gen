@@ -1,3 +1,4 @@
+import streamlit as st
 import random
 
 betuk = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 
@@ -13,9 +14,9 @@ spec_karakterek = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_',
 
 print("Szia, ez egy jelszo generator!")
 
-betuk_sz = int(input("Hany betubol alljon a jelszo?\n"))
-szamok_sz = int(input("Hany szambol alljon a jelszo?\n"))
-spec_karakterek_sz = int(input("Hany specialis karakterbol alljon a jelszo?\n"))
+betuk_sz = st.slider(int(input("Hany betubol alljon a jelszo?\n")))
+szamok_sz = st.slider(int(input("Hany szambol alljon a jelszo?\n")))
+spec_karakterek_sz = st.slider(int(input("Hany specialis karakterbol alljon a jelszo?\n")))
 
 jelszo = []
 
@@ -29,4 +30,4 @@ for i in random.sample(spec_karakterek, spec_karakterek_sz):
     jelszo.append(i)
     
 random.shuffle(jelszo)
-print(f"A jelszavad: {"".join(jelszo)}")
+st.write(f"A jelszavad: {"".join(jelszo)}")
