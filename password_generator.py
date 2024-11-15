@@ -12,11 +12,15 @@ spec_karakterek = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_',
                    '=', '+', '[', ']', '{', '}', '\\', '|', ';', ':', "'", '"', 
                    ',', '<', '.', '>', '/', '?', '`', '~']
 
+max_betuk = len(betuk)
+max_szamok = len(szamok)
+max_spec_karakterek = len(spec_karakterek)
+
 st.write("Szia, ez egy jelszo generator!")
 
-betuk_sz = st.slider("Hany betubol alljon a jelszo?\n")
-szamok_sz = st.slider("Hany szambol alljon a jelszo?\n")
-spec_karakterek_sz = st.slider("Hany specialis karakterbol alljon a jelszo?\n")
+betuk_sz = st.slider("Hány betűből álljon a jelszó?", 1, max_betuk, 8)
+szamok_sz = st.slider("Hány szám legyen a jelszóban?", 0, max_szamok, 3)
+spec_karakterek_sz = st.slider("Hány speciális karakter legyen a jelszóban?", 0, max_spec_karakterek, 1)
 
 jelszo = []
 
